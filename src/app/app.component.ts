@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Card } from './models';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'day-31Workshop';
+
+  players = ["Fred"]
+
+  playerHand: Card[] = []
+
+  newCard(card: Card | undefined) {
+    console.info(card)
+    // @ts-ignore
+    this.playerHand.push(card)
+  }
 }
